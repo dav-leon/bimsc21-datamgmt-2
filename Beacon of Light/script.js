@@ -17,7 +17,7 @@ function init() {
     // create a scene and a camera
     scene = new THREE.Scene()
     scene.background = new THREE.Color(1,1,1)
-    camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 0.1, 1000 )
+    camera = new THREE.PerspectiveCamera( 5, window.innerWidth / window.innerHeight, .2, 2000 )
     camera.position.y = - 100
 
     // create the renderer and add it to the html
@@ -30,7 +30,7 @@ function init() {
     const directionalLight = new THREE.DirectionalLight( 0xffffff )
     directionalLight.position.set( 0, 0, 2 )
     directionalLight.castShadow = true
-    directionalLight.intensity = 2
+    directionalLight.intensity = 3
     scene.add( directionalLight )
 
     raycaster = new THREE.Raycaster()
